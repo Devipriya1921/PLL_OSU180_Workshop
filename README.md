@@ -808,11 +808,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   ```
   cd PLL/ 
   magic -T ../SCN6M_SUBM.10.tech pll.mag
-  ```
-  #### Terminal Snap
   
-  ![layout-term](https://user-images.githubusercontent.com/80625515/137942867-c3618b89-8af3-46e9-b63f-e1581f1c2150.png)
-
+  ```
   
   ![mag-7-pll-1](https://user-images.githubusercontent.com/83152452/137968275-57419b78-963c-449c-a265-eb33ead85740.png)
 
