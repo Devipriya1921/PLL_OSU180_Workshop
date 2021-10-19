@@ -27,6 +27,7 @@ Here is a block diagram of PLL.
 
 ![blockdiagram](https://user-images.githubusercontent.com/80625515/137904145-fcaccd2a-aef9-4177-a52c-9dea5fee8af9.jpg)
 
+![Block  diag-2](https://user-images.githubusercontent.com/83152452/137978963-8b6cadfa-104a-49bd-af9c-30fe6c76c942.jpeg)
 
 <picture-block-diagram>
 
