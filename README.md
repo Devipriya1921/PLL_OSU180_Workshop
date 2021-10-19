@@ -68,8 +68,6 @@ plot v(in)+2 v(out)
   
 2-input NAND Gate
   
- ![nand-schematic](https://user-images.githubusercontent.com/80625515/137901358-b05e4d9a-b78e-483d-b1a9-bcc804084aa1.png)
- 
 
 ```
 ****************************
