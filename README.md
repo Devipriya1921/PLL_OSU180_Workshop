@@ -750,7 +750,7 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 ## Layout
 
   
-### Standard cell Layouts are shown below
+### Standard cell Layout is as shown below
   
   Command used -
   
