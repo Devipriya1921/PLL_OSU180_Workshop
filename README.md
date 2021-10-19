@@ -6,11 +6,11 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Tools Used](#tools-used)
-- [Spice Netlist](#spice-netlist)
-- [Pre-Layout Simulation](#pre-layout-simulation)
-- [Layout](#layout)
-- [Post-Layout Simulation](#post-layout-simulation)
+- [Tools Required](#tools-required)
+- [Spice Netlist Generated](#spice-netlist-generated)
+- [Pre Layout Simulation](#pre-layout-simulation)
+- [Magic Layout](#magic-layout)
+- [Post Layout Simulation](#post-layout-simulation)
 - [References](#references)
 - [Author](#author)
 - [Acknowledgement](#acknowledgement)
@@ -23,7 +23,7 @@ The clock generator is one of the most crucial part in synchronous processor & p
 
 In view of its usefulness, the phase locked loop or PLL is found in many wireless, radio, and general electronic items from mobile phones to broadcast radios, televisions to Wi-Fi routers, walkie talkie radios to professional communications systems etc.
 
-Here is a block diagram of PLL.
+Block diagram of PLL.
 
 ![blockdiagram](https://user-images.githubusercontent.com/80625515/137904145-fcaccd2a-aef9-4177-a52c-9dea5fee8af9.jpg)
 
@@ -31,13 +31,13 @@ Here is a block diagram of PLL.
 
 <picture-block-diagram>
 
-## Tools Used
+## Tools Required
 
 - [Ngspice](http://ngspice.sourceforge.net/download.html)
 - [eSim EDA tool](https://github.com/FOSSEE/eSim.git)
 - [Magic](http://opencircuitdesign.com/magic/)
 
-## SPICE Netlist
+## SPICE Netlist Generated
 
 Inverter 
 
@@ -652,7 +652,7 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 ```
 
 
-## Pre-Layout Simulation
+## Pre Layout Simulation
 
 ### Inverter 
  
@@ -670,31 +670,37 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   
  ![nand101-1](https://user-images.githubusercontent.com/83152452/137966908-c3b64460-15db-4e37-a87c-7e8d5a18ba8f.png)
 
-### NAND Waveform Snap
+- Waveform
   
  ![nand101-2](https://user-images.githubusercontent.com/83152452/137966913-065ac71d-e3d4-4e70-b210-c122c17e711b.png)
 
-### 3-input NAND Simulation Snap
+### 3-Input NAND 
+  
+- Simulation  
   
   ![nand301-1](https://user-images.githubusercontent.com/83152452/137966925-96346dcf-ab87-4298-81bf-48f1756b734e.png)
 
-### 3-input NAND Waveform Snap
+- Waveform
   
   ![nand301-2](https://user-images.githubusercontent.com/83152452/137966940-7f852443-953f-47b7-9fe0-e300f3cdcd16.png)
 
-### 4-input NAND Simulation Snap
+### 4-Input NAND 
+  
+- Simulation
   
  ![nand401-1](https://user-images.githubusercontent.com/83152452/137966954-214e83eb-529d-4362-a1e9-047e2c0a411d.png)
 
-### 4-input NAND Waveform Snap
+- Waveform
   
   ![nand401-2](https://user-images.githubusercontent.com/83152452/137966970-20e37c77-2110-46b0-ad43-5e4af4abfe20.png)
 
-### Phase Frequency Detector simulation Snap
+### Phase Frequency Detector 
+  
+- Simulation
   
   ![pfd-1](https://user-images.githubusercontent.com/83152452/137967476-d0c4f887-dc2c-459b-a293-b1e08c959e63.png)
 
-### Phase Frequency Detector Waveform Snap
+- Waveform
   
  ![pfd-2](https://user-images.githubusercontent.com/83152452/137967483-ce5e7bce-94f8-4730-8c78-bbd2c558d3e5.png)
 
@@ -730,7 +736,7 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   ![freq-div-2](https://user-images.githubusercontent.com/83152452/137967585-c8fe2e2d-6ac3-49f6-99f2-135d1b72b509.png)
   
   
-### Final PLL 
+### PLL 
 
 - Simulation
   
@@ -744,7 +750,9 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 ## Layout
 
   
-### Standard cell Layout
+### Standard cell Layouts are shown below
+  
+  Command used -
   
   ```
   cd std_cells/
@@ -755,6 +763,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 
 
 ### Phase Frequency Detector Layout
+ 
+  Command used -
   
   ```
   cd pfd/
@@ -766,6 +776,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 
  ### Voltage-Controlled Oscillator Layout 
    
+ Command used -
+   
   ```
   cd vco/
   magic -T ../SCN6M_SUBM.10.tech vco101.mag
@@ -775,6 +787,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   
   
  ### MUX Layout 
+ 
+  Command used -
   
   ```
   cd mux21/
@@ -785,6 +799,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 
   
 ### Frequency Divider (/2) Layout
+ 
+  Command used -
   
   ```
   cd freqdiv2/
@@ -794,6 +810,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   ![mag-5-freqdiv_2](https://user-images.githubusercontent.com/83152452/137968239-9a9c900c-ed37-4aff-9f67-cc1fe9ec0448.png)
 
 ### Frequency Divider (/8) Layout
+ 
+  Command used -
   
   ```
   cd freqdiv8/
@@ -803,7 +821,8 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
   ![mag-6-freqdiv_8](https://user-images.githubusercontent.com/83152452/137968267-d86a7b0b-3135-4088-af89-e04859520fc3.png)
   
 ### Final PLL Layout
-  
+ 
+  Command used -
   
   ```
   cd PLL/ 
@@ -815,30 +834,30 @@ plot V(f_in)+8 V(up)+6 V(down)+4 V(Vin_vco)+2 V(f_out)
 
 
 
-## Post-Layout Simulation
+## Post Layout Simulation
   
-  1. Phase Frequency Detector 
+  - Phase Frequency Detector 
   
   ![pfd-post-sim](https://user-images.githubusercontent.com/80625515/137934471-e42e38d9-842f-4f78-ba8b-a7c8eee02135.png)
 
-  2. Multiplexer 
+  - Multiplexer 
   
   ![mux-post-sim](https://user-images.githubusercontent.com/80625515/137934546-9994597b-cf52-41d9-a031-0c463c93dc05.png)
 
-  3. Frequency Divider(/2)
+  - Frequency Divider(/2)
   
   ![freqdiv-post-sim](https://user-images.githubusercontent.com/80625515/137934571-b4fde167-7ea9-4815-aaa5-7a3b0ad9e5cb.png)
 
-  4. Frequency Divider(/8)
+  - Frequency Divider(/8)
 
   ![freqdiv8-post-sim](https://user-images.githubusercontent.com/80625515/137935295-8d2500f3-b760-4024-b9b1-8813bb3e9e53.png)
 
-  5. Voltage Controlled Oscillator 
+  - Voltage Controlled Oscillator 
   
  ![vco-sim-post](https://user-images.githubusercontent.com/80625515/137947386-4c38c1e9-5661-42f3-ae1b-6053f4eb142e.png)
 
 
-  6. PLL Final 
+  - PLL
   
   ![pllv2-vcp-post](https://user-images.githubusercontent.com/80625515/137935995-4275daaf-4c76-46a8-8682-f4f7da901179.png)
 
