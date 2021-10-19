@@ -19,9 +19,12 @@
 
 This repository focuses on workshop on PLL (Phase Locked Loop) also known as On-Chip Clock Multiplier. In this workshop we are going to cover a brief description on what is PLL and it's each block. We will also see pre-layout and post-layout simulations of each block of a PLL.
 
-The clock generator is one of the most crucial part in synchronous processor & probably most susceptible after power lines which can cause failure of entire circuitry if not designed properly. It is widely used in radio frequency or wireless applications.
+A phase-locked loop (PLL) is an electronic circuit with a voltage or voltage-driven oscillator that constantly adjusts to match the frequency of an input signal. PLLs are used to generate, stabilize, modulate, demodulate, filter or recover a signal from a "noisy" communications channel where data has been interrupted.
 
-In view of its usefulness, the phase locked loop or PLL is found in many wireless, radio, and general electronic items from mobile phones to broadcast radios, televisions to Wi-Fi routers, walkie talkie radios to professional communications systems etc.
+The main purpose of a PLL circuit is to synchronize an output oscillator signal with a reference signal. When the phase difference between the two signals is zero, the system is “locked.” A PLL is a closed-loop system with a control mechanism to reduce any phase error that may occur.
+
+The clock generator is one of the most crucial part in synchronous processor & probably most susceptible after power lines which can cause failure of entire circuitry if not designed properly.
+PLL is found in radio and general electronic items from mobile phones to broadcast radios, televisions to Wi-Fi routers, walkie talkie radios to professional communications systems, etc.
 
 Block diagram of PLL.
 
@@ -39,7 +42,7 @@ Block diagram of PLL.
 
 ## SPICE Netlist Generated
 
-Inverter 
+- Inverter 
 
   
 ```
@@ -66,7 +69,7 @@ plot v(in)+2 v(out)
 ```
   
   
-2-input NAND Gate
+- NAND Gate
   
 
 ```
@@ -97,7 +100,7 @@ plot V(in1)+4 V(in2)+2 V(out)
 
 ```
 
-3-input NAND Gate
+- 3-input NAND Gate
 
 ```
 ****************************
@@ -133,7 +136,7 @@ plot V(in1)+6 V(in2)+4 V(in3)+2 V(out)
 ```
 
   
-4-input NAND Gate
+- 4-input NAND Gate
   
 ```
 ****************************
@@ -169,7 +172,7 @@ plot V(in1)+8 V(in2)+6 V(in3)+4 V(in4)+2 V(out)
 ```
 
 
-Phase Frequency Detector
+- Phase Frequency Detector
 
 ```
 
@@ -257,7 +260,7 @@ plot V(f_clk_in)+6 V(f_VCO)+4 V(up)+2 V(down)
 ```
 
 
-Charge Pump with Phase Detector
+- Charge Pump with Phase Detector
 
 ```
 
@@ -369,7 +372,7 @@ plot V(f_in)+8 V(f_out_8)+6 V(up)+4 V(down)+2 V(vin_vco)
 
 ```
 
-Voltage Controlled Oscillator
+- Voltage Controlled Oscillator
 
 ```
 
@@ -430,7 +433,7 @@ plot V(Vinvco)+2 V(osc_fb)
 
 ```
 
-Frequency Divider
+- Frequency Divider
 
 ```
 
@@ -477,7 +480,7 @@ plot V(clock)+2 V(q)
 ```
 
 
-PLL
+- PLL
 
 ```
 
