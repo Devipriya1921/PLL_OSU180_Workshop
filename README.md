@@ -7,6 +7,7 @@
 
 - [Introduction](#introduction)
 - [Tools Required](#tools-required)
+- [Installation](#installation)
 - [Spice Netlist Generated](#spice-netlist-generated)
 - [Pre Layout Simulation](#pre-layout-simulation)
 - [Magic Layout](#magic-layout)
@@ -37,8 +38,36 @@ Block diagram of PLL.
 ## Tools Required
 
 - [Ngspice](http://ngspice.sourceforge.net/download.html)
-- [eSim EDA tool](https://github.com/FOSSEE/eSim.git)
+- [eSim EDA tool](https://esim.fossee.in/downloads)
 - [Magic](http://opencircuitdesign.com/magic/)
+  
+
+## Installation
+  
+1. Run Git clone command in terminal
+  
+  ```
+  
+  git clone https://github.com/parasgidd/avsdpll_3v3.git
+  
+  ```
+  
+2. Run These commands in terminal
+  
+  ```
+  
+  sudo apt-get update -y
+  sudo apt-get install -y ngspice
+  
+  ```
+  
+  ```
+  
+  sudo apt-get update -y
+  sudo apt-get install -y magic
+  
+  ```
+  
 
 ## SPICE Netlist Generated
 
